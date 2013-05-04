@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CD Collection: <%=item.name%></title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+<body>
+<!-- Representing a single CD --> 
+<div class="control">
+<div itemscope itemtype="http://schema.org/MusicAlbum">
+
+     <% if (related_items.length > 0) { %>  
+     
+   <h3 itemprop="name"><em><%=item.name%></em></h3> 
+    <h3 itemprop="byArtist" itemscope itemtype="http://schema.org/MusicGroup"><%=item.artist%></h3>
+   </div>
+   
+    <ol>
+    <div itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
+      <% related_items.forEach(function(track) { %>
+      <span itemprop="name"><li><a href="/tracks/<%=track.id%>"><%=track.name%></a></li></span>
+      <% }); %>
+    </ol>
+   
+    
+    <% } else { %>
+    No tracks have been added to the <em><%=item.name%></em> album.
+    <% } %>
+    <h2>Add a track to this CD!</h2> 
+     <script>
+      function onFormSubmit(form) {
+        form.action = form.action + form.elements['item[id]'].value;
+        console.log(form.action);
+        return true;
+      } 
+      </script>
+      <form method="post" action="/tracks/"
+            onsubmit="return onFormSubmit(this);">
+        <!-- The line above dynamically sets the PUT destination when the -->
+        <!-- form is submitted. -------------------------------------------->
+        <input type="hidden" name="_method" value="put">
+        <input type="hidden" name="cd" value="<%=item.id%>">
+        <!-- The line above tells the server to treat this as a PUT request. -->
+        <p><label>Track ID:
+          (Write the track name in all lowercase letters with no spaces.):
+          <input name="item[id]" type="text" required
+                 placeholder="fanmail">
+        </label></p>
+    
+        <p><label>Track Number (numbers only):
+        <input name="item[num]" type="text" required
+                 placeholder="1">
+        </label></p>
+        
+        <p><label>Track name: 
+          <span itemprop="name"><input name="item[name]" type="text" required
+                 placeholder="FanMail"></span>
+        </label></p>
+        
+         <p><label>Artist:</label>
+           <span itemprop="byArtist"><input name="item[artist]" type="text"></span>
+        </label></p>
+                          
+        <p><label>Featured Artist:</label>
+            <input name="item[featartist]" type="text">
+        </label></p>
+        
+             
+        <button>Add or update</button>
+      </form>
+      </div></div><br />
+      
+     Go back to the home <a href="/">menu</a>?<br />
+     Check out the <a href="/cds/">CD Collection</a>?<br />
+     Look at some <a href="/genres/">genres</a>?<br />
+     Explore the <a href="/tracks/">track collection</a>?
+    
+</body>
+</html> 

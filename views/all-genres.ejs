@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Genres</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+<!-- Representing a list of Genres -->
+<div class="control" itemprop="genres" itemscope itemtype="http://schema.org/MusicAlbum">
+   <h2>Genres</h2>
+   <% if (items.length > 0) { %>
+    <ul>
+      <% items.forEach(function(item) { %>
+     <li><a href="/genres/<%=item._id%>">
+     <span itemprop="genre"><%=item.name%></span></a></li>
+      <% }); %>
+    </ul>
+    <% } else { %>
+    <div>No cds have been added to the collection.</div>
+    <% } %>
+    
+    <h2>Add a genre to the collection!</h2> 
+     <script>
+      function onFormSubmit(form) {
+        form.action = form.action + form.elements['item[id]'].value;
+        console.log(form.action);
+        return true;
+      } 
+      </script>
+      <form method="post" action="/genres/"
+            onsubmit="return onFormSubmit(this);">
+        <!-- The line above dynamically sets the PUT destination when the -->
+        <!-- form is submitted. -------------------------------------------->
+        <input type="hidden" name="_method" value="put">
+        <!-- The line above tells the server to treat this as a PUT request. -->
+         <p><label>Genre ID:
+           <input name="item[id]" type="text" required
+                 placeholder="rb">
+        </label></p>
+        <p><label>Genre:
+           <input name="item[name]" type="text" required
+                 placeholder="R&B">
+        </label></p>
+        
+          <p><label>ASIN of CD associated with genre:
+           <input name="item[cd]" type="text" required
+                 placeholder="B000006OB0">
+        </label></p>
+        <button>Add or update</button>
+        
+      </form>
+        
+    
+    </div>
+     Go back <a href="/">home</a>?<br />
+     Check out the <a href="/cds/">CD Collection</a>?<br />
+     Look at some <a href="/genres/">genres</a>?<br />
+     Explore the <a href="/tracks/">track collection</a>?
+  </body>
