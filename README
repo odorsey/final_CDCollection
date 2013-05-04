@@ -14,7 +14,7 @@ The CD Collection web service allows users to maintain a collection of CDs. CDs 
     
     class Attribute Values:
     all: located in all-cds.ejs; informs the user that a list of all of the CDs are being shown
-    all-tracks: located in all-tracks.ejs; informs the user that a list of all of the tracks are being shown
+    all-tracks: located in all-tracks.ejs; informs the user that a list of all of the tracks are being      shown
     cd-name: applied to a SPAN tag and located in all-cds.ejs and one-cd.ejs; informs the user that this is the name of a particular CD
     single: applied to a SPAN tag and located in one-cd.ejs; informs the user that only a single cd from the list of CDs is being shown
     track-name:applied to a SPAN tag and located in one-track.ejs
