@@ -17,12 +17,13 @@ The CD Collection web service allows users to maintain a collection of CDs. CDs 
     home: applied to a DIV tag in index.ejs; informs the user that this file is the homepage of the web service, CD Collection 
 
     class Attribute Values:
-    all: located in all-cds.ejs; informs the user that a list of all of the CDs are being shown
-    all-tracks: located in all-tracks.ejs; informs the user that a list of all of the tracks are being shown
+    all: applied to a <ul> tag located in all-cds.ejs; informs the user that a list of all of the CDs are being shown
+    all-tracks: applied to a <ul> located in all-tracks.ejs; informs the user that a list of all of the tracks are being shown
     control: applied to a DIV tag in all of the pages; dictates a style (that of a box) that controls the layout of each page 
     cd-name: applied to a SPAN tag and located in all-cds.ejs and one-cd.ejs; informs the user that this is the name of a particular CD
-    single: applied to a SPAN tag and located in one-cd.ejs; informs the user that only a single cd from the list of CDs is being shown
-    track-name:applied to a SPAN tag and located in one-track.ejs
+    single: applied to a <li> tag and located in one-cd.ejs and all-cds.ejs; informs the user that only a single cd from the list of CDs is being shown
+    single-track: applied to a <li> tag and located in one-cd.ejs and all-tracks.ejs; informs the user that only a single track is being displayed
+    tracks: applied to an <ol> tag and located in one-cd.ejs and all-tracks.ejs; shows that a list of tracks is being displayed 
     
     name Attribute Values:
    FOR ALL-CDS.EJS page: 
