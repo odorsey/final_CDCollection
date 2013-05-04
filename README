@@ -25,3 +25,7 @@ The CD Collection web service allows users to maintain a collection of CDs. CDs 
     track-keyword: applied to a FORM/INPUT tag; informs the user that a track name should be provided in this form (identified by its track number)
     rel Attribute Values:
     ASIN: located in all-cds.ejs and cd.ejs; indicates that this is the ASIN for a particular CD and links to the /{ASIN} location artist: located in one-cd.ejs; indicates that this is the artist for a particular CD
+    home: indicates that this leads to the home page<br />
+    cds: indicates that this leads to the page that displays all of the cds in the collection
+    genres: indicates that this leads to the page that displays all of the genres in the collection
+    tracks: indicates that this leads to the page that displays all of the tracks in the collection
