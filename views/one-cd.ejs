@@ -6,7 +6,7 @@
   </head>
 <body>
 <!-- Representing a single CD --> 
-<div class="control">
+<div class="control" id="one-cd">
 <div itemscope itemtype="http://schema.org/MusicAlbum">
 
      <% if (related_items.length > 0) { %>  
@@ -15,10 +15,10 @@
     <h3 itemprop="byArtist" itemscope itemtype="http://schema.org/MusicGroup"><%=item.artist%></h3>
    </div>
    
-    <ol>
+    <ol class="tracks">
     <div itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
       <% related_items.forEach(function(track) { %>
-      <span itemprop="name"><li><a href="/tracks/<%=track.id%>"><%=track.name%></a></li></span>
+      <span itemprop="name"><li class="single-track"><a href="/tracks/<%=track.id%>"><%=track.name%></a></li></span>
       <% }); %>
     </ol>
    
@@ -70,10 +70,10 @@
       </form>
       </div></div><br />
       
-     Go back to the home <a href="/">menu</a>?<br />
-     Check out the <a href="/cds/">CD Collection</a>?<br />
-     Look at some <a href="/genres/">genres</a>?<br />
-     Explore the <a href="/tracks/">track collection</a>?
+     Go back to the home <a href="/" rel="home">menu</a>?<br />
+     Check out the <a href="/cds/" rel="cds">CD Collection</a>?<br />
+     Look at some <a href="/genres/" rel="genres">genres</a>?<br />
+     Explore the <a href="/tracks/" rel="tracks">track collection</a>?
     
 </body>
 </html> 
