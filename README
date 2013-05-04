@@ -10,8 +10,7 @@ The CD Collection web service allows users to maintain a collection of CDs. CDs 
 
     Attribute values: id, class, name, rel
     id Attribute values:
-    CDs; applied to a DIV tag in all-cds.html and one-cd.html; informs the user that that file provides you with a list relating to all of the CDS within the collection
-    queries: applied to a DIV tag; informs the user that the file represents a list of possible queries for this particular data collection.
+    CDs: applied to a DIV tag in all-cds.html and one-cd.html; informs the user that that file provides you with a list relating to all of the CDS within the collection
     
     class Attribute Values:
     all: located in all-cds.ejs; informs the user that a list of all of the CDs are being shown
