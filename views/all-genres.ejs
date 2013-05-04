@@ -6,7 +6,7 @@
   </head>
   <body>
 <!-- Representing a list of Genres -->
-<div class="control" itemprop="genres" itemscope itemtype="http://schema.org/MusicAlbum">
+<div class="control" id="genres" itemprop="genres" itemscope itemtype="http://schema.org/MusicAlbum">
    <h2>Genres</h2>
    <% if (items.length > 0) { %>
     <ul>
@@ -52,8 +52,8 @@
         
     
     </div>
-     Go back <a href="/">home</a>?<br />
-     Check out the <a href="/cds/">CD Collection</a>?<br />
-     Look at some <a href="/genres/">genres</a>?<br />
-     Explore the <a href="/tracks/">track collection</a>?
+     Go back <a href="/" rel="home">home</a>?<br />
+     Check out the <a href="/cds/" rel="cds">CD Collection</a>?<br />
+     Look at some <a href="/genres/" rel="genres">genres</a>?<br />
+     Explore the <a href="/tracks/" rel="tracks">track collection</a>?
   </body>
