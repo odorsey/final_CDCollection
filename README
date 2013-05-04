@@ -18,16 +18,41 @@ The CD Collection web service allows users to maintain a collection of CDs. CDs 
 
     class Attribute Values:
     all: located in all-cds.ejs; informs the user that a list of all of the CDs are being shown
-    all-tracks: located in all-tracks.ejs; informs the user that a list of all of the tracks are being      shown
+    all-tracks: located in all-tracks.ejs; informs the user that a list of all of the tracks are being shown
+    control: applied to a DIV tag in all of the pages; dictates a style (that of a box) that controls the layout of each page 
     cd-name: applied to a SPAN tag and located in all-cds.ejs and one-cd.ejs; informs the user that this is the name of a particular CD
     single: applied to a SPAN tag and located in one-cd.ejs; informs the user that only a single cd from the list of CDs is being shown
     track-name:applied to a SPAN tag and located in one-track.ejs
     
     name Attribute Values:
-    ASIN-keyword: applied to a FORM/INPUT tag; informs the user that an ASIN should be provided in this form
-    track-keyword: applied to a FORM/INPUT tag; informs the user that a track name should be provided in this form (identified by its track number)
+   FOR ALL-CDS.EJS page: 
+    item[id]: applied to a FORM/INPUT tag; informs the user that the id (ASIN) for a CD should be entered here
+    item[name]: applied to a FORM/INPUT tag; informs the user that the name of a CD should be entered here
+    item[genre]: applied to a FORM/INPUT tag; informs the user that the genre of a CD should be entered here
+    item[artist]: applied to a FORM/INPUT tag; informs the user that the artist of a CD
+    should be entered here. 
+
+   FOR ALL-GENRES.EJS page:
+    item[id]: applied to a FORM/INPUT tag; informs the user that the id (the lowercased/nospaces name 
+    of a genre) for a genre should be entered here
+    item[name]: applied to a FORM/INPUT tag; informs the user that the name of a genre relating to the 
+    CD should be entered here
+    item[cd]: applied to a FORM/INPUT tag; informs the user that the name of a CD should be entered here
+    
+    
+   FOR ONE-CD.EJS page:
+    item[id]: applied to a FORM/INPUT tag; informs the user that the id (the lowercased/nospaces name 
+    of a track) for a track should be entered here
+    item[num]: applied to a FORM/INPUT tag; informs the user that the number of a track relating to the 
+    CD should be entered here
+    item[name]: applied to a FORM/INPUT tag; informs the user that the name of a track should be entered 
+    here
+    item[byArtist]: applied to a FORM/INPUT tag; informs the user that the artist of a CD should be 
+    entered here
+    item[featartist]: applied to a FORM/INPUT tag; informs the user that the featured artist 
+    of a track should be entered here
+    
     rel Attribute Values:
-    ASIN: located in all-cds.ejs and cd.ejs; indicates that this is the ASIN for a particular CD and links to the /{ASIN} location artist: located in one-cd.ejs; indicates that this is the artist for a particular CD
     home: indicates that this leads to the home page<br />
     cds: indicates that this leads to the page that displays all of the cds in the collection
     genres: indicates that this leads to the page that displays all of the genres in the collection
