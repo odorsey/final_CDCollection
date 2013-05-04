@@ -1,11 +1,6 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>ReadMe File for Final Project: CD Collection</title>
-</head>
-<body>
-<!-- README FILE FOR FINAL PROJECT --> 
-<h2>CD Collection</h2>
-<p>CD Collection is a web service allows users to locate and maintain a 
+
+CD Collection
+CD Collection is a web service allows users to locate and maintain a 
 
 collection of CDs. CDs will be able to be searched for based on the artist 
 
@@ -13,7 +8,7 @@ of the CD, the identification number of the CD (or ASIN), or the track
 
 number of a song that is on the CD. The user will also be about to retrieve 
 
-a list of all of the CDs that are found in the collection. </p>
+a list of all of the CDs that are found in the collection. 
 
 <ul>
 <li><strong>all-cds.html</strong> is a file that shows how a list of all of 
