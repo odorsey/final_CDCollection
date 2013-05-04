@@ -6,12 +6,12 @@
   </head>
   <body>
 <!-- Representing a list of CDs -->
- <div class="control" itemscope itemtype="http://schema.org/MusicAlbum"> 
+ <div class="control" id="CDs" itemscope itemtype="http://schema.org/MusicAlbum"> 
       <h2>CD Collection</h2>
       <% if (items.length > 0) { %>
-    <ul>
+    <ul class="all">
       <% items.forEach(function(item) { %>
-     <li><a href="/cds/<%=item._id%>">
+     <li class="single"><a href="/cds/<%=item._id%>">
      <span itemprop="name"><%=item.name%></span></a></li>
       <% }); %>
     </ul>
@@ -55,10 +55,12 @@
         <button>Add or update</button>
       </form>
       </div>
-      
-     Go back <a href="/">home</a>?<br />
-     Look at some <a href="/genres/">genres</a>?<br />
-     Explore the <a href="/tracks/">track collection</a>?
+     <p>
+     Go back <a href="/" rel="home">home</a>?<br />
+     Check out the <a href="/cds/" rel="cds">CD Collection</a>?<br />
+     Look at some <a href="/genres/" rel="genres">genres</a>?<br />
+     Explore the <a href="/tracks/" rel="tracks">track collection</a>?
+     </p>
     
 </body>
 </html> 
