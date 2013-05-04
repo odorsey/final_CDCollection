@@ -6,7 +6,8 @@ The CD Collection web service allows users to maintain a collection of CDs. CDs 
     all-genres.ejs is a file that shows a list of all of the genres associated with CDs in the collection.
     all-tracks.ejs is a file that shows a list of all of the tracks in the collection.
     index.ejs is a files that shows the home page of the CD Collection web service. It provides links to the CD Collection (all-cds.ejs), Genres (all-genres.ejs), and Tracks (all-tracks.ejs).
-    
+    one-cd.ejs is a file that shows the contents of one CD within the collection.    
+
     Attribute values: id, class, name, rel
     id Attribute values:
     CDs; applied to a DIV tag in all-cds.html and one-cd.html; informs the user that that file provides you with a list relating to all of the CDS within the collection
