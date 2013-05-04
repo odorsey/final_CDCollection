@@ -57,4 +57,5 @@ The CD Collection web service allows users to maintain a collection of CDs. CDs 
     home: indicates that this leads to the home page<br />
     cds: indicates that this leads to the page that displays all of the cds in the collection
     genres: indicates that this leads to the page that displays all of the genres in the collection
+    github: indicates that this leads to my GitHub repository for this project (final_CDCollection)
     tracks: indicates that this leads to the page that displays all of the tracks in the collection
