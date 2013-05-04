@@ -6,16 +6,16 @@
   </head>
   <body>
 <!-- Representing a list of Tracks -->
-<div class="control">
+<div class="control" id="tracks">
     <div itemprop itemscope itemtype="http://schema.org/MusicRecording">
         <h1>List of All Tracks in The Collection</h1>
         <span itemprop="description">Below is an alphabetical list of all of the tracks in the CD collection.</span> 
  
    
         <% if (items.length > 0) { %>
-        <ol>
+        <ol class="tracks">
          <% items.forEach(function(item) { %>
-         <li><span itemprop="name"><em><%=item.name%></em></span>
+         <li class="single-track"><span itemprop="name"><em><%=item.name%></em></span>
    
       
       <span itemprop="byArtist"><%=item.artist%></span></li>
@@ -27,10 +27,10 @@
     <% } %>
     
     <p>
-     Go back <a href="/">home</a>?<br />
-     Check out the <a href="/cds/">CD Collection</a>?<br />
-     Look at some <a href="/genres/">genres</a>?<br />
-     Explore the <a href="/tracks/">track collection</a>?
+     Go back <a href="/" rel="home">home</a>?<br />
+     Check out the <a href="/cds/" rel="cds">CD Collection</a>?<br />
+     Look at some <a href="/genres/" rel="genres">genres</a>?<br />
+     Explore the <a href="/tracks/" rel="tracks">track collection</a>?
     </p>
     </div>
     </body>
